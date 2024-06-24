@@ -11,10 +11,36 @@
 /* ###################################
     root
 ################################### */
+:root{
+--stdBorder: 1px solid black;
+--stdRadius: 0.5rem;
+--stdMargin: 0.5rem;
+--stdPadding: 0.5rem;
 
-/* <tbd> */
+--darkBackground: black;
+--brightBackground: white;
+--darkText: black;
+--brightText: white;
 
+--primaryColor500: #641381;
+--primaryColor400: #7A229A;
+--primaryColor300: #a849ca;
+--secondaryColor500: #3e9976;
+--secondaryColor400: #5FBB97;
+--secondaryColor300: #86dbbb;
+--accentColor500: #d1294e;
+--accentColor400: #EE4266;
+--accentColor300: #f55e7f;
+}
 
 /* ###################################
-    root
+    easMainContainer
 ################################### */
+.easContainer{
+    width: 500px;
+    height: 500px;
+    border: var(--stdBorder);
+    border-radius: var(--stdRadius);
+    margin: 10px auto;
+    background-color: var(--primaryColor400);
+}
