@@ -59,8 +59,8 @@
     easDivs
 ################################### */
 .easDiv{
-    flex-grow: 1;
-    flex-shrink: 1;
+    flex: 1 1 0; /*same as flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/
+    width: 0;
     min-width: 0px; /*shrink as much as needed (overwrite contentsize)*/
     border: var(--stdBorder);
     border-radius: var(--stdRadius);
