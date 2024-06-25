@@ -16,11 +16,13 @@
 --stdRadius: 0.5rem;
 --stdMargin: 0.5rem;
 --stdPadding: 0.5rem;
+--stdBoxShadow: 2px 2px 4px 0px #000000;
 
 --darkBackground: black;
 --brightBackground: white;
 --darkText: black;
 --brightText: white;
+
 
 --primaryColor500: #641381;
 --primaryColor400: #7A229A;
@@ -34,13 +36,35 @@
 }
 
 /* ###################################
-    easMainContainer
+    easDivContainer
 ################################### */
-.easContainer{
-    width: 500px;
-    height: 500px;
+.easDivContainer{
+    width: 300px;
+    height: 300px;
     border: var(--stdBorder);
     border-radius: var(--stdRadius);
     margin: 10px auto;
+    padding: var(--stdPadding);
     background-color: var(--primaryColor400);
+    
+    /* flex Parent*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: center;
+    gap: 0.1rem;
+}
+
+/* ###################################
+    easDivs
+################################### */
+.easDiv{
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0px; /*shrink as much as needed (overwrite contentsize)*/
+    border: var(--stdBorder);
+    border-radius: var(--stdRadius);
+    padding: var(--stdPadding);
+    box-shadow: var(--stdBoxShadow);
+
 }
