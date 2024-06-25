@@ -24,4 +24,4 @@ function createXMultipliedXDivs(x){
 /* ##########################################################################
     invoke funktions
 ##########################################################################*/
-createXMultipliedXDivs(10);
+createXMultipliedXDivs(5);
