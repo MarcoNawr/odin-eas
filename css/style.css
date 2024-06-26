@@ -51,27 +51,37 @@
     
     /* flex Parent*/
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: stretch;
     align-content: center;
     gap: 0.1rem;
 }
 
 /* ###################################
-    easDivs
+    easDivRow
+################################### */
+
+.easDivRow{
+    display: flex;
+    gap: 0.1rem;
+}
+
+
+/* ###################################
+    easDiv
 ################################### */
 .easDiv{
     flex: 1 1 0; /*same as flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/
     width: 0;
     min-width: 0px; /*shrink as much as needed (overwrite contentsize)*/
-    /* border: var(--stdBorder);
+    border: var(--stdBorder);
     border-radius: var(--stdRadius);
-    box-shadow: var(--stdBoxShadow); */
+    box-shadow: var(--stdBoxShadow);
 
-    /*Glas-Effect*/
+    /*Glas-Effect
     backdrop-filter: blur(100px);
     box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
-    border: 2px solid rgba(255,255,255,0.18);
+    border: 2px solid rgba(255,255,255,0.18);*/
 
     padding: var(--stdPadding);
     

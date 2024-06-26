@@ -10,13 +10,18 @@ const easDivContainer = document.querySelector(".easDivContainer");
 ##########################################################################*/
 
 function createXMultipliedXDivs(x){
-    for(i=0; i<x*x; i++){
-        const newDiv = document.createElement("div");
-        newDiv.classList.toggle("easDiv");
-        newDiv.textContent = i;
-        easDivContainer.appendChild(newDiv);
-
-        /*CHANGE THIS TO: two forloops ==> One for Collum one for Row (e.g. 5x5). Needs a new CSS class */
+    //ROW
+    for(i=0; i<x; i++){
+        const newDivRow = document.createElement("div");
+        newDivRow.classList.toggle("easDivRow");      
+        //COLUMN
+        for(j=0; j<x; j++){
+            const newDiv = document.createElement("div");
+            newDiv.classList.toggle("easDiv");
+            newDiv.textContent = i;
+            newDivRow.appendChild(newDiv);
+        }
+        easDivContainer.appendChild(newDivRow);
     }
 }
 
@@ -24,4 +29,4 @@ function createXMultipliedXDivs(x){
 /* ##########################################################################
     invoke funktions
 ##########################################################################*/
-createXMultipliedXDivs(5);
+createXMultipliedXDivs(90);
