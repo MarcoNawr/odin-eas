@@ -10,7 +10,8 @@ const easDivContainer = document.querySelector(".easDivContainer");
 ##########################################################################*/
 
 function createXMultipliedXDivs(x){
-    //<tbd> Delete already existing DIVS (restart)
+    //Delete already existing DIVS (Restart)
+    deleteAlleasDivs();
     //ROW
     for(i=0; i<x; i++){
         const newDivRow = document.createElement("div");
@@ -26,9 +27,13 @@ function createXMultipliedXDivs(x){
     }
 }
 
+function deleteAlleasDivs(){
+    easDivContainer.innerHTML= "";
+}
+
 
 /* ##########################################################################
     invoke funktions
 ##########################################################################*/
-createXMultipliedXDivs(3);
+createXMultipliedXDivs(5);
 
