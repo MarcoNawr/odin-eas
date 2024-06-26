@@ -36,6 +36,45 @@
 }
 
 /* ###################################
+    easContainer
+################################### */
+
+.easContainer{
+    /*flex Parent*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ###################################
+    easContainer__InputContainer
+################################### */
+.easContainer__InputContainer{
+    margin: var(--stdMargin);
+    /*flex Parent*/
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem
+}
+
+/* ###################################
+    easContainer__BtnContainer
+################################### */
+.easContainer__btn{
+    padding: 5px 20px 5px 20px;
+}
+
+.easContainer__BtnContainer{
+    margin: var(--stdMargin);
+    /*flex Parent*/
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+/* ###################################
     easDivContainer
 ################################### */
 .easDivContainer{

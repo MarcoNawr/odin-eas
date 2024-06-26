@@ -8,7 +8,22 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
+    
     <div class="easContainer">
+        <h1>Etch-a-Sketch</h1>
+        <p class="easContainer__Text">Give me a Number between 2 and 99: </p>
+        <div class="easContainer__InputContainer">
+            <input class="easContainer__input" type="number">
+            <p class="easContainer__Text" id="p_multiplyBy" style="display: inline;"> x 5</p>
+            <button class="easContainer__btn" id="createDivs">Create Divs</button>
+        </div>
+        <p class="errorMessage">Only Numbers between 2 and 99</p>
+        <div class="easContainer__BtnContainer">
+            <button class="easContainer__btn" id="Black">Black</button>
+            <button class="easContainer__btn" id="Blue">Blue</button>
+            <button class="easContainer__btn" id="Rainbow">Rainbow</button>
+            <button class="easContainer__btn" id="Eraser">Eraser</button>
+        </div>
         <div class="easDivContainer"></div>
     </div>
 </body>
