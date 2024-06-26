@@ -1,6 +1,8 @@
 /* ##########################################################################
     Globale Variables
 ##########################################################################*/
+let currentBackgroundcolor = "black";
+let isDrawing = false;
 
 const easDivContainer = document.querySelector(".easDivContainer");
 
@@ -21,6 +23,17 @@ function createXMultipliedXDivs(x){
             const newDiv = document.createElement("div");
             newDiv.classList.toggle("easDiv");
             newDiv.textContent = "";
+            newDiv.addEventListener("mousedown", function(){
+                isDrawing = true;
+            });
+            newDiv.addEventListener("mouseover", function(e){
+                if(isDrawing){
+                    e.target.style.backgroundColor = currentBackgroundcolor;
+                }
+            });
+            newDiv.addEventListener("mouseup", function(){
+                isDrawing=false;
+            });
             newDivRow.appendChild(newDiv);
         }
         easDivContainer.appendChild(newDivRow);
@@ -35,5 +48,5 @@ function deleteAlleasDivs(){
 /* ##########################################################################
     invoke funktions
 ##########################################################################*/
-createXMultipliedXDivs(5);
+createXMultipliedXDivs(35);
 
