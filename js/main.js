@@ -10,6 +10,7 @@ const easDivContainer = document.querySelector(".easDivContainer");
 ##########################################################################*/
 
 function createXMultipliedXDivs(x){
+    //<tbd> Delete already existing DIVS (restart)
     //ROW
     for(i=0; i<x; i++){
         const newDivRow = document.createElement("div");
@@ -18,7 +19,7 @@ function createXMultipliedXDivs(x){
         for(j=0; j<x; j++){
             const newDiv = document.createElement("div");
             newDiv.classList.toggle("easDiv");
-            newDiv.textContent = i;
+            newDiv.textContent = "";
             newDivRow.appendChild(newDiv);
         }
         easDivContainer.appendChild(newDivRow);
@@ -29,4 +30,5 @@ function createXMultipliedXDivs(x){
 /* ##########################################################################
     invoke funktions
 ##########################################################################*/
-createXMultipliedXDivs(90);
+createXMultipliedXDivs(3);
+
