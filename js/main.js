@@ -5,11 +5,12 @@ let currentBackgroundcolor = "black";
 let isDrawing = false;
 
 const easDivContainer = document.querySelector(".easDivContainer");
-
+easDivContainer.addEventListener("mouseleave", () => {isDrawing = false});
 
 /* ##########################################################################
     funktion Deklaration
 ##########################################################################*/
+
 
 function createXMultipliedXDivs(x){
     //Delete already existing DIVS (Restart)
@@ -22,7 +23,7 @@ function createXMultipliedXDivs(x){
         for(j=0; j<x; j++){
             const newDiv = document.createElement("div");
             newDiv.classList.toggle("easDiv");
-            newDiv.textContent = "";
+            //newDiv.textContent = "";
             newDiv.addEventListener("mousedown", function(){
                 isDrawing = true;
             });
