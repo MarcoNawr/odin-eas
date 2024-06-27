@@ -1,17 +1,28 @@
 /* ##########################################################################
     Globale Variables
 ##########################################################################*/
+
+/*CONST*/
 const ERRORMESSAGE = "Only Numbers between 2 and 99";
 
+/*Variables */
 let currentBackgroundcolor = "black";
 let isDrawing = false;
 let isRainbowMode = false;
 
+/*QUERYSELECTOR*/
 const easDivContainer = document.querySelector(".easDivContainer");
-easDivContainer.addEventListener("mouseleave", () => {isDrawing = false});
 const p_ErrorMessage = document.querySelector(".errorMessage");
 const p_multiplyBy = document.querySelector("#p_multiplyBy");
 const input = document.querySelector(".easContainer__input");
+const btnCreateDivs= document.querySelector("#createDivs");
+const btnBlack= document.querySelector("#Black");
+const btnBlue= document.querySelector("#Blue");
+const btnRainbow= document.querySelector("#Rainbow");
+const btnEraser = document.querySelector("#Eraser");
+
+/*EVENTLISTENER*/
+easDivContainer.addEventListener("mouseleave", () => {isDrawing = false});
 input.addEventListener("input", ()=>{
     p_multiplyBy.textContent = "x " + input.value;
     if(input.value >=2 && input.value <100){
@@ -21,7 +32,6 @@ input.addEventListener("input", ()=>{
         p_ErrorMessage.style.visibility = "visible";
     }    
 });
-const btnCreateDivs= document.querySelector("#createDivs");
 btnCreateDivs.addEventListener("click", () =>{
     if(input.value >=2 && input.value <100){
         createXMultipliedXDivs(input.value);
@@ -29,13 +39,9 @@ btnCreateDivs.addEventListener("click", () =>{
         
     }
 });
-const btnBlack= document.querySelector("#Black");
 btnBlack.addEventListener("click",()=> {setCurrentBackgroundcolor("black"); isRainbowMode=false;});
-const btnBlue= document.querySelector("#Blue");
 btnBlue.addEventListener("click",()=>{setCurrentBackgroundcolor("blue"); isRainbowMode=false;});
-const btnRainbow= document.querySelector("#Rainbow");
 btnRainbow.addEventListener("click",()=> {setCurrentBackgroundcolor("rainbow"); isRainbowMode=true;});
-const btnEraser = document.querySelector("#Eraser");
 btnEraser.addEventListener("click",() => {setCurrentBackgroundcolor("eraser"); isRainbowMode=false;});
 
 
