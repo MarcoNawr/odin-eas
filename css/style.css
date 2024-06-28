@@ -39,12 +39,19 @@
 /* ###################################
     easContainer
 ################################### */
-
 .easContainer{
     /*flex Parent*/
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1{
+    margin: var(--stdMargin);
+    padding: var(--stdPadding);
+    background: linear-gradient(to right, #7a229a, #9a1a93, #b4168a, #ca1b80, #dc2975, #e3405c, #e15946, #d97136, #bb8d2d, #9aa244, #79b16c, #5fbb97);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;	
 }
 
 .errorMessage{
@@ -65,7 +72,20 @@
     /*flex Parent*/
     display: flex;
     justify-content: center;
+    align-items: strech;
     gap: 0.5rem
+}
+.easContainer__input{
+    width: 10%;
+    min-width: 50px;
+    text-align: center;
+}
+
+.easContainer__Textp_multiplyBy{
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--accentColor400);
 }
 
 /* ###################################
