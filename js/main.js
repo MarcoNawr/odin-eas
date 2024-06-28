@@ -67,7 +67,8 @@ function createXMultipliedXDivs(x){
                     drawingHint.textContent = "Click Mouse within Drawing Area to START DrawingMode";
                 }else {
                     isDrawing = true;
-                    drawingHint.textContent = "Click Mouse within Drawing Area to END DrawingMode"};
+                    drawingHint.textContent = "Click Mouse within Drawing Area to END DrawingMode"
+                };
             });
             newDiv.addEventListener("mouseover", function(e){
                 if(isDrawing){
@@ -93,7 +94,7 @@ function setCurrentBackgroundcolor(color){
     if(color === "rainbow"){
         currentBackgroundcolor =  `rgb(${getRandomInt(255)},${getRandomInt(255)},${getRandomInt(255)})`
     }else if(color === "eraser"){
-        currentBackgroundcolor =  "rgba( 255, 255, 255, 0.0 )";
+        currentBackgroundcolor =  "hsl(284, 100%, 76%, 0.1)";
     }else{
         currentBackgroundcolor = color;
     }

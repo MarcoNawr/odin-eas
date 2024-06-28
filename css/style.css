@@ -28,13 +28,25 @@
 --primaryColor400: #7A229A;
 --primaryColor300: #a849ca;
 --primaryColor200: #cd6ff0;
+--primaryColor100: #df86ff;
 --secondaryColor500: #3e9976;
 --secondaryColor400: #5FBB97;
 --secondaryColor300: #86dbbb;
 --accentColor500: #d1294e;
 --accentColor400: #EE4266;
 --accentColor300: #f55e7f;
+--accentColor200: #fc829c;
+--accentColor100: #f7bdc9;
 }
+
+/* ###################################
+    body
+################################### */
+
+body{
+    background-color: #fce1e1;
+}
+
 
 /* ###################################
     easContainer
@@ -47,22 +59,34 @@
 }
 
 h1{
-    margin: var(--stdMargin);
-    padding: var(--stdPadding);
+    margin: 1px;
+    padding: 1px;
     background: linear-gradient(to right, #7a229a, #9a1a93, #b4168a, #ca1b80, #dc2975, #e3405c, #e15946, #d97136, #bb8d2d, #9aa244, #79b16c, #5fbb97);
     -webkit-text-fill-color: transparent;
     background-clip: text;	
 }
 
+.easContainer__Textp_Intro{
+   font-size: 0.8rem;
+}
+
 .errorMessage{
     visibility: hidden;
-    padding: var(--stdPadding);
+    padding: 0.2rem;
+    border-radius: var(--stdRadius);
     background-color: rgb(255, 223, 223);
     color: red;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 
 }
 
+.easContainer__DrawingHint{
+    padding: 0.3rem;
+    border-radius: var(--stdRadius);
+    background-color: rgb(141, 219, 255);
+    color: rgb(0, 95, 238);
+    font-size: 0.6rem;
+}
 
 /* ###################################
     easContainer__InputContainer
@@ -84,8 +108,8 @@ h1{
 .easContainer__Textp_multiplyBy{
     align-self: center;
     font-weight: bold;
-    font-size: 1.1rem;
-    color: var(--accentColor400);
+    font-size: 1.0rem;
+    color: var(--accentColor500);
 }
 
 /* ###################################
@@ -93,10 +117,37 @@ h1{
 ################################### */
 .easContainer__btn{
     padding: 5px 20px 5px 20px;
+    border: var(--stdBorder);
+    border-radius: var(--stdRadius);
+    background-color: var(--accentColor400);
+    color: var(--brightText);
+}
+
+#Black:hover{
+    background-color: var(--darkBackground);
+    color: var(--brightText);
+}
+#Blue:hover{
+    background-color: blue;
+    color: var(--brightText);
+}
+#Rainbow:hover{
+    background-image:  linear-gradient(to right, #7a229a, #9a1a93, #b4168a, #ca1b80, #dc2975, #e3405c, #e15946, #d97136, #bb8d2d, #9aa244, #79b16c, #5fbb97);    	
+    color: var(--brightText);
+}
+
+#Eraser:hover{
+    background-color: rgb(255,255,255,0.1);   	
+    color: var(--darkText);
+}
+#createDivs:hover{
+    background-color: var(--accentColor300);
+    color: var(--brightText);
 }
 
 .easContainer__BtnContainer{
-    margin: var(--stdMargin);
+   
+    padding: var(--stdPadding);
     /*flex Parent*/
     display: flex;
     justify-content: center;
@@ -108,15 +159,16 @@ h1{
     easDivContainer
 ################################### */
 .easDivContainer{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border: var(--stdBorder);
     border-radius: var(--stdRadius);
     margin: 10px auto;
     padding: var(--stdPadding);
     /* background-image: url("../img/03.jpg");
     background-size: cover; */
-    background-color: var(--primaryColor200);
+    background-color: hsl(284, 55%, 54%, 0.1);
+    box-shadow: 5px 5px 15px 5px #000000;
 
     /* flex Parent*/
     display: flex;
@@ -141,7 +193,6 @@ h1{
 ################################### */
 .easDiv{
     flex: 1 1 0; /*same as flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/
-    /*width: 0;*/
-    /*min-width: 0px; /*shrink as much as needed (overwrite contentsize)*/
-    border: var(--stdBorder);
+    border: 1px solid white;
+    background-color: hsl(284, 100%, 76%, 0.1);
 }
