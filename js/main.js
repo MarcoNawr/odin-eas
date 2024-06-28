@@ -20,9 +20,9 @@ const btnBlack= document.querySelector("#Black");
 const btnBlue= document.querySelector("#Blue");
 const btnRainbow= document.querySelector("#Rainbow");
 const btnEraser = document.querySelector("#Eraser");
+const drawingHint = document.querySelector(".easContainer__DrawingHint");
 
 /*EVENTLISTENER*/
-easDivContainer.addEventListener("mouseleave", () => {isDrawing = false});
 input.addEventListener("input", ()=>{
     p_multiplyBy.textContent = "x " + input.value;
     if(input.value >=2 && input.value <100){
@@ -61,9 +61,13 @@ function createXMultipliedXDivs(x){
         for(j=0; j<x; j++){
             const newDiv = document.createElement("div");
             newDiv.classList.toggle("easDiv");
-            //newDiv.textContent = "";
-            newDiv.addEventListener("mousedown", function(){
-                isDrawing = true;
+            newDiv.addEventListener("click", function(){
+                if(isDrawing){
+                    isDrawing=false;
+                    drawingHint.textContent = "Click Mouse within Drawing Area to START DrawingMode";
+                }else {
+                    isDrawing = true;
+                    drawingHint.textContent = "Click Mouse within Drawing Area to END DrawingMode"};
             });
             newDiv.addEventListener("mouseover", function(e){
                 if(isDrawing){
@@ -74,9 +78,6 @@ function createXMultipliedXDivs(x){
                         e.target.style.backgroundColor = currentBackgroundcolor;
                     }
                 }
-            });
-            newDiv.addEventListener("mouseup", function(){
-                isDrawing=false;
             });
             newDivRow.appendChild(newDiv);
         }
